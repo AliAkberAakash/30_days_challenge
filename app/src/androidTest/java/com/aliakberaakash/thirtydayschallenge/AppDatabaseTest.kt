@@ -36,13 +36,4 @@ class AppDatabaseTest {
         db.close()
     }
 
-    @Test
-    @Throws(Exception::class)
-    fun insertAndGetChallenge() {
-        val challenge : Challenge
-        /*challeg.insert(night)
-        val tonight = sleepDao.getTonight()
-        assertEquals(tonight?.sleepQuality, -1)*/
-    }
-
 }
