@@ -15,8 +15,8 @@ interface ChallengeDao {
     fun getAllChallenge() : List<Challenge>
 
     @Query("SELECT * FROM Challenge WHERE challengeId=:id")
-    fun getChallenge(id : Int) : List<Challenge>
+    fun getChallenge(id : Int) : Challenge
 
     @Query("DELETE  FROM Challenge WHERE challengeId=:id")
-    fun deleteChallenge(id : Int) : List<Challenge>
+    fun deleteChallenge(id : Int)
 }
