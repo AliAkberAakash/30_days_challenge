@@ -11,7 +11,7 @@ import com.aliakberaakash.thirtydayschallenge.data.model.ChallengeAndActivity
 interface ChallengeDao {
 
     @Insert
-    fun insert(challenge: Challenge) : Int
+    fun insert(challenge: Challenge)
 
     @Query("SELECT * FROM Challenge")
     fun getAllChallenge() : List<Challenge>
