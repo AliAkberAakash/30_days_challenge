@@ -4,18 +4,16 @@ import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.aliakberaakash.thirtydayschallenge.core.AppDatabase
-import com.aliakberaakash.thirtydayschallenge.data.localdb.ChallengeDao
-import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
+import com.aliakberaakash.thirtydayschallenge.data.localdb.ChallengeAndActivityDao
 import org.junit.After
 import org.junit.Before
-import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.IOException
 
 @RunWith(AndroidJUnit4::class)
 class AppDatabaseTest {
 
-    private lateinit var challengeDao: ChallengeDao
+    private lateinit var challengeAndActivityDao: ChallengeAndActivityDao
     private lateinit var db: AppDatabase
 
     @Before
@@ -27,7 +25,7 @@ class AppDatabaseTest {
             // Allowing main thread queries, just for testing.
             .allowMainThreadQueries()
             .build()
-        challengeDao = db.challengeDatabaseDao
+        challengeAndActivityDao = db.challengeDatabaseDao
     }
 
     @After

@@ -6,7 +6,7 @@ import androidx.room.Transaction
 import com.aliakberaakash.thirtydayschallenge.data.model.ChallengeAndActivity
 
 @Dao
-interface ChallengeDao {
+interface ChallengeAndActivityDao {
 
     //get all challenges and all associated activities
     @Transaction
