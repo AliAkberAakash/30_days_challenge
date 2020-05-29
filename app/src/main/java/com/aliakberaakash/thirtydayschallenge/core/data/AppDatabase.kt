@@ -1,4 +1,4 @@
-package com.aliakberaakash.thirtydayschallenge.core
+package com.aliakberaakash.thirtydayschallenge.core.data
 
 import android.content.Context
 import androidx.room.Database
@@ -22,7 +22,8 @@ abstract class AppDatabase : RoomDatabase() {
 
         fun getInstance(context: Context): AppDatabase {
             synchronized(this) {
-                var instance = INSTANCE
+                var instance =
+                    INSTANCE
 
                 if (instance == null) {
                     instance = Room.databaseBuilder(

@@ -3,7 +3,7 @@ package com.aliakberaakash.thirtydayschallenge
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.aliakberaakash.thirtydayschallenge.core.AppDatabase
+import com.aliakberaakash.thirtydayschallenge.core.data.AppDatabase
 import com.aliakberaakash.thirtydayschallenge.data.localdb.ChallengeDao
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import junit.framework.Assert.assertEquals

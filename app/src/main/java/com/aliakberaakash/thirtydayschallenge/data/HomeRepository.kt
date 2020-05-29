@@ -1,7 +1,7 @@
 package com.aliakberaakash.thirtydayschallenge.data
 
 import android.content.Context
-import com.aliakberaakash.thirtydayschallenge.core.AppDatabase
+import com.aliakberaakash.thirtydayschallenge.core.data.AppDatabase
 import com.aliakberaakash.thirtydayschallenge.data.model.Activity
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import com.aliakberaakash.thirtydayschallenge.data.model.HomeViewModelCallBack
