@@ -4,7 +4,6 @@ import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.aliakberaakash.thirtydayschallenge.core.AppDatabase
-import com.aliakberaakash.thirtydayschallenge.data.localdb.ChallengeAndActivityDao
 import com.aliakberaakash.thirtydayschallenge.data.localdb.ChallengeDao
 import org.junit.After
 import org.junit.Before
