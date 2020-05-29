@@ -10,5 +10,5 @@ data class ChallengeAndActivity (
         parentColumn = "challengeId",
         entityColumn = "activityId"
     )
-    var activity: Activity
+    var activityList: List<Activity>
 )
