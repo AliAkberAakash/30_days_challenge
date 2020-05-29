@@ -7,7 +7,7 @@ import androidx.lifecycle.LifecycleOwner
 import com.orhanobut.logger.Logger
 
 
-class BaseViewModel(private val myApplication: Application) : AndroidViewModel(myApplication), IViewModel {
+open class BaseViewModel(private val myApplication: Application) : AndroidViewModel(myApplication), IViewModel {
     override fun onAny(owner: LifecycleOwner?, event: Lifecycle.Event?) {
         Logger.d("${event?.name}")
     }
