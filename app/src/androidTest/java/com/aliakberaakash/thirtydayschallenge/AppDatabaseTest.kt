@@ -25,7 +25,7 @@ class AppDatabaseTest {
             // Allowing main thread queries, just for testing.
             .allowMainThreadQueries()
             .build()
-        challengeAndActivityDao = db.challengeDatabaseDao
+        challengeAndActivityDao = db.challengeAndActivityDao
     }
 
     @After
