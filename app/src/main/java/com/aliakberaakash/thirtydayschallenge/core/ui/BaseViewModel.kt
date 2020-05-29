@@ -4,6 +4,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 
 class BaseViewModel(private val myApplication: Application) : AndroidViewModel(myApplication) {
-
+    
     
 }
