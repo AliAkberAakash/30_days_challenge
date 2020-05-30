@@ -3,8 +3,10 @@ package com.aliakberaakash.thirtydayschallenge.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.aliakberaakash.thirtydayschallenge.R
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import com.aliakberaakash.thirtydayschallenge.databinding.HomeListItemBinding
+import com.bumptech.glide.Glide
 
 class HomeListViewHolder(private val binding : HomeListItemBinding) : RecyclerView.ViewHolder(binding.root){
 
@@ -22,6 +24,13 @@ class HomeListViewHolder(private val binding : HomeListItemBinding) : RecyclerVi
     fun bind(item: Challenge) {
 
         val myContext = itemView.context
+
+
+        Glide
+            .with(myContext)
+            .load(R.drawable.boy)
+            .centerCrop()
+            .into(binding.challengeImage);
 
     }
 
