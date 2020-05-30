@@ -39,7 +39,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(), BottomS
         adapter = HomeListAdapter()
         binding.recyclerView.adapter = adapter
 
-        binding.imageView.visibility = View.INVISIBLE
+        //binding.imageView.visibility = View.INVISIBLE
 
         viewModel.challengeList.observe(viewLifecycleOwner, Observer {
             Logger.d(it.toString())

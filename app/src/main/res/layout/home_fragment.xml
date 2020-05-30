@@ -52,6 +52,7 @@
 
 
         <ImageView
+            android:visibility="@{viewModel.visible}"
             android:layout_marginTop="@dimen/_48sdp"
             android:id="@+id/imageView"
             android:layout_width="@dimen/_250sdp"
@@ -62,6 +63,7 @@
             app:layout_constraintTop_toTopOf="@+id/recyclerView" />
 
         <TextView
+            android:visibility="@{viewModel.visible}"
             android:padding="@dimen/_16sdp"
             android:textSize="@dimen/_14sdp"
             android:textAlignment="center"
