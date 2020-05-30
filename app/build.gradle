@@ -54,4 +54,11 @@ dependencies {
     //logger
     implementation 'com.orhanobut:logger:2.2.0'
 
+    //Material
+    implementation 'com.google.android.material:material:1.1.0'
+
+    //sdp and ssp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
 }
