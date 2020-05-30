@@ -44,4 +44,7 @@ class HomeViewModel(private val myApplication : Application) : BaseViewModel(myA
         TODO("Not yet implemented")
     }
 
+    override fun onInsertChallenge() {
+        getAllChallenge()
+    }
 }
