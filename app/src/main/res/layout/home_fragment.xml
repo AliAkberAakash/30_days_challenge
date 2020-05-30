@@ -17,6 +17,7 @@
         tools:context=".ui.HomeFragment">
 
         <TextView
+            android:textColor="@color/white"
             android:layout_marginStart="@dimen/_16sdp"
             android:textSize="@dimen/_24ssp"
             android:layout_width="match_parent"
@@ -55,6 +56,7 @@
             android:layout_margin="@dimen/_8sdp"
             android:background="@color/colorAccent"
             android:text="+"
+            android:textColor="@color/white"
             android:textSize="@dimen/_24sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
