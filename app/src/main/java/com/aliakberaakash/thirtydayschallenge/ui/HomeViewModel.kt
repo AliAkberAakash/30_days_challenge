@@ -33,7 +33,7 @@ class HomeViewModel(private val myApplication : Application) : BaseViewModel(myA
     }
 
     override fun onReceivedAllChallenge(myChallengeList: List<Challenge>) {
-        _challengeList.value = myChallengeList
+        _challengeList.postValue(myChallengeList)
     }
 
     override fun onReceivedChallengeAndActivity(challengeAndActivity: ChallengeAndActivity) {
