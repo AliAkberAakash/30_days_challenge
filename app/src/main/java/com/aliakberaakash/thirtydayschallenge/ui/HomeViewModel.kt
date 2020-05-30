@@ -18,6 +18,16 @@ class HomeViewModel(private val myApplication : Application) : BaseViewModel(myA
     val challengeList : LiveData<List<Challenge>>
         get() = _challengeList
 
+    fun insertChallenge(challenge: Challenge)
+    {
+        repository.insertChallenge(challenge)
+    }
+
+    fun getAllChallenge()
+    {
+        repository.getAllChallenges()
+    }
+
     override fun onReceiveChallenge(challenge: Challenge?) {
         TODO("Not yet implemented")
     }
