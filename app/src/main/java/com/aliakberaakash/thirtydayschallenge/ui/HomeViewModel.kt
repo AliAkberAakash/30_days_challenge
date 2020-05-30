@@ -1,6 +1,7 @@
 package com.aliakberaakash.thirtydayschallenge.ui
 
 import android.app.Application
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.aliakberaakash.thirtydayschallenge.core.ui.BaseViewModel
@@ -9,7 +10,7 @@ import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import com.aliakberaakash.thirtydayschallenge.data.model.ChallengeAndActivity
 import com.aliakberaakash.thirtydayschallenge.data.model.HomeViewModelCallBack
 
-class HomeViewModel(myApplication : Application) : BaseViewModel(myApplication), HomeViewModelCallBack {
+class HomeViewModel(private val myApplication : Application) : BaseViewModel(myApplication), HomeViewModelCallBack {
 
     private val repository = HomeRepository(myApplication, this)
 
