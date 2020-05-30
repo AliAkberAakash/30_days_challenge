@@ -30,7 +30,9 @@ class HomeListViewHolder(private val binding : HomeListItemBinding) : RecyclerVi
             .with(myContext)
             .load(R.drawable.boy)
             .centerCrop()
-            .into(binding.challengeImage);
+            .into(binding.challengeImage)
+
+        binding.challenge = item
 
     }
 

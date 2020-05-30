@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.aliakberaakash.thirtydayschallenge.R
 import com.aliakberaakash.thirtydayschallenge.core.ui.BaseFragment
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
@@ -16,6 +17,7 @@ import kotlinx.android.synthetic.main.home_fragment.view.*
 class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(), BottomSheetCallBack{
 
     private lateinit var bottomSheetDialog : BottomSheetDialog
+    private lateinit var adapter : HomeListAdapter
 
     override fun getLayoutId() = R.layout.home_fragment
 
@@ -33,9 +35,17 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(), BottomS
 
         viewModel.getAllChallenge()
 
+        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+        adapter = HomeListAdapter()
+        binding.recyclerView.adapter = adapter
+
+        binding.imageView.visibility = View.INVISIBLE
+
         viewModel.challengeList.observe(viewLifecycleOwner, Observer {
             Logger.d(it.toString())
             Log.d("hello", it.size.toString())
+
+            adapter.submitList(it)
         })
     }
 
