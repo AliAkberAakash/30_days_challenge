@@ -43,24 +43,27 @@
             android:layout_margin="@dimen/_12sdp"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/materialButton"
+            app:layout_constraintBottom_toTopOf="@+id/add_new_challenge"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view" />
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/materialButton"
+            android:backgroundTint="@color/colorAccent"
+            app:cornerRadius="@dimen/_16sdp"
+            app:icon="@drawable/ic_add_black_24dp"
+            app:iconPadding="0dp"
+            app:iconGravity="textStart"
+            android:id="@+id/add_new_challenge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_8sdp"
-            android:background="@color/colorAccent"
-            android:text="+"
-            android:textColor="@color/white"
             android:textSize="@dimen/_24sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
