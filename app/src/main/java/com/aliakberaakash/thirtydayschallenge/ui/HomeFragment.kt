@@ -40,7 +40,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(), BottomS
     }
 
     override fun onSavedButtonClicked(title: String) {
-        viewModel.insertChallenge(Challenge(-1,title, 0))
+        viewModel.insertChallenge(Challenge(null,title, 0))
         bottomSheetDialog.dismiss()
     }
 

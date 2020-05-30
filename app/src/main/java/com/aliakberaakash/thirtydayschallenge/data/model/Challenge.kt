@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class Challenge (
 
     @PrimaryKey(autoGenerate = true)
-    val challengeId : Int = 0,
+    val challengeId : Int?,
     @ColumnInfo(name = "title")
     val title : String = "",
     @ColumnInfo(name = "days")

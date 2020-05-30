@@ -14,6 +14,7 @@ class HomeRepository(private val context: Context, private val callBack: HomeVie
     {
         thread(true){
             db.challengeDao.insert(challenge)
+            callBack.onInsertChallenge()
         }
     }
 
