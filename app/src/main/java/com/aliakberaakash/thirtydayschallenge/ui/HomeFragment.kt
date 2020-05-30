@@ -2,6 +2,7 @@ package com.aliakberaakash.thirtydayschallenge.ui
 
 import com.aliakberaakash.thirtydayschallenge.R
 import com.aliakberaakash.thirtydayschallenge.core.ui.BaseFragment
+import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import com.aliakberaakash.thirtydayschallenge.databinding.HomeFragmentBinding
 import kotlinx.android.synthetic.main.home_fragment.*
 import kotlinx.android.synthetic.main.home_fragment.view.*
@@ -20,7 +21,7 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(), BottomS
     }
 
     override fun onSavedButtonClicked(title: String) {
-
+        viewModel.insertChallenge(Challenge(-1,title, 0))
     }
 
 
