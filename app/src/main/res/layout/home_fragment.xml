@@ -51,14 +51,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:backgroundTint="@color/colorAccent"
-            app:cornerRadius="@dimen/_16sdp"
+            app:cornerRadius="@dimen/_8sdp"
             app:icon="@drawable/ic_add_black_24dp"
             app:iconPadding="0dp"
             app:iconGravity="textStart"
             android:id="@+id/add_new_challenge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_8sdp"
+            android:layout_margin="@dimen/_12sdp"
             android:textSize="@dimen/_24sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
