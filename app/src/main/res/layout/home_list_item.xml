@@ -9,6 +9,11 @@
             type="com.aliakberaakash.thirtydayschallenge.data.model.Challenge" />
     </data>
 
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/_4sdp"
+        android:elevation="@dimen/_4sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:padding="@dimen/_8sdp"
         android:layout_width="match_parent"
@@ -63,4 +68,5 @@
             tools:text="25%" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </layout>
