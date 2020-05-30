@@ -13,7 +13,7 @@
         android:layout_margin="@dimen/_4sdp"
         app:cardCornerRadius="@dimen/_4sdp"
         android:elevation="@dimen/_8sdp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:padding="@dimen/_6sdp"
@@ -44,6 +44,7 @@
             tools:text="Learn Python" />
 
         <ProgressBar
+            app:progressBarUpdate="@{challenge}"
             tools:progress="50"
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginEnd="@dimen/_8sdp"
@@ -58,13 +59,14 @@
 
         <TextView
             android:id="@+id/challenge_progress_text"
+            app:progressPercentFormatted="@{challenge}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="261dp"
-            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
             android:layout_marginBottom="@dimen/_8sdp"
             app:layout_constraintBottom_toTopOf="@+id/challenge_progress"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/challenge_image"
             tools:text="25%" />
 
