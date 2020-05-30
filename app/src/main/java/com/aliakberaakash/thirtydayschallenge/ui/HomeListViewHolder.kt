@@ -33,6 +33,7 @@ class HomeListViewHolder(private val binding : HomeListItemBinding) : RecyclerVi
             .into(binding.challengeImage)
 
         binding.challenge = item
+        binding.executePendingBindings()
 
     }
 
