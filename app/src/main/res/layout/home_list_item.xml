@@ -10,12 +10,13 @@
     </data>
 
     <androidx.cardview.widget.CardView
+        android:layout_margin="@dimen/_4sdp"
         app:cardCornerRadius="@dimen/_4sdp"
-        android:elevation="@dimen/_4sdp"
+        android:elevation="@dimen/_8sdp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:padding="@dimen/_8sdp"
+        android:padding="@dimen/_6sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
