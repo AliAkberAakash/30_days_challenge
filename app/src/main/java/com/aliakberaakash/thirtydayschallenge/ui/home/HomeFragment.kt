@@ -1,4 +1,4 @@
-package com.aliakberaakash.thirtydayschallenge.ui
+package com.aliakberaakash.thirtydayschallenge.ui.home
 
 import android.os.Bundle
 import android.util.Log
@@ -9,9 +9,6 @@ import com.aliakberaakash.thirtydayschallenge.R
 import com.aliakberaakash.thirtydayschallenge.core.ui.BaseFragment
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import com.aliakberaakash.thirtydayschallenge.databinding.HomeFragmentBinding
-import com.aliakberaakash.thirtydayschallenge.ui.home.BottomSheetCallBack
-import com.aliakberaakash.thirtydayschallenge.ui.home.BottomSheetDialog
-import com.aliakberaakash.thirtydayschallenge.ui.home.HomeViewModel
 import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.home_fragment.view.*
 
@@ -42,7 +39,8 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(),
         viewModel.getAllChallenge()
 
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = HomeListAdapter()
+        adapter =
+            HomeListAdapter()
         binding.recyclerView.adapter = adapter
 
         //binding.imageView.visibility = View.INVISIBLE
