@@ -7,7 +7,7 @@ import com.aliakberaakash.thirtydayschallenge.ui.details.DetailsViewModelCallBac
 import kotlin.concurrent.thread
 
 class DetailsRepository(val context: Application, private val callBack : DetailsViewModelCallBack) {
-    
+
     private val db = AppDatabase.getInstance(context)
 
     fun getChallengeAndActivity(challengeId : Int)
