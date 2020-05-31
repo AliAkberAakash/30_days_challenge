@@ -2,6 +2,7 @@ package com.aliakberaakash.thirtydayschallenge.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.aliakberaakash.thirtydayschallenge.R
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
@@ -36,6 +37,12 @@ class HomeListViewHolder(private val binding : HomeListItemBinding) : RecyclerVi
 
         binding.challenge = item
         binding.executePendingBindings()
+
+        binding.parentLayout.setOnClickListener {
+
+            val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(item.challengeId!!)
+            binding.parentLayout.findNavController().navigate(action)
+        }
 
     }
 

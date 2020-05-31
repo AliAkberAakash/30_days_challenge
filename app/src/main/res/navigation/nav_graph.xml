@@ -14,5 +14,10 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.aliakberaakash.thirtydayschallenge.ui.details.DetailsFragment"
-        android:label="DetailsFragment" />
+        android:label="DetailsFragment" >
+        <argument
+            android:name="challengeId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
 </navigation>
