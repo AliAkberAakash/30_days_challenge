@@ -1,4 +1,4 @@
-package com.aliakberaakash.thirtydayschallenge.ui
+package com.aliakberaakash.thirtydayschallenge.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

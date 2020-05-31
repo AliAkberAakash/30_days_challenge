@@ -1,4 +1,4 @@
-package com.aliakberaakash.thirtydayschallenge.ui
+package com.aliakberaakash.thirtydayschallenge.ui.home
 
 interface BottomSheetCallBack {
 

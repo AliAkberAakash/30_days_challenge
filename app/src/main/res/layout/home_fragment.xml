@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.aliakberaakash.thirtydayschallenge.ui.HomeViewModel" />
+            type="com.aliakberaakash.thirtydayschallenge.ui.home.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -1,4 +1,4 @@
-package com.aliakberaakash.thirtydayschallenge.ui
+package com.aliakberaakash.thirtydayschallenge.ui.home
 
 import androidx.recyclerview.widget.DiffUtil
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge

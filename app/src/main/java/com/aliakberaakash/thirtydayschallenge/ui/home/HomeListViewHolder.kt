@@ -1,4 +1,4 @@
-package com.aliakberaakash.thirtydayschallenge.ui
+package com.aliakberaakash.thirtydayschallenge.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -17,7 +17,9 @@ class HomeListViewHolder(private val binding : HomeListItemBinding) : RecyclerVi
             val binding = HomeListItemBinding.inflate(
                 layoutInflater, parent, false)
 
-            return HomeListViewHolder(binding)
+            return HomeListViewHolder(
+                binding
+            )
         }
     }
 

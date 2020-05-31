@@ -9,12 +9,15 @@ import com.aliakberaakash.thirtydayschallenge.R
 import com.aliakberaakash.thirtydayschallenge.core.ui.BaseFragment
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import com.aliakberaakash.thirtydayschallenge.databinding.HomeFragmentBinding
+import com.aliakberaakash.thirtydayschallenge.ui.home.BottomSheetCallBack
+import com.aliakberaakash.thirtydayschallenge.ui.home.BottomSheetDialog
+import com.aliakberaakash.thirtydayschallenge.ui.home.HomeViewModel
 import com.orhanobut.logger.Logger
-import kotlinx.android.synthetic.main.home_fragment.*
 import kotlinx.android.synthetic.main.home_fragment.view.*
 
 
-class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(), BottomSheetCallBack{
+class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(),
+    BottomSheetCallBack {
 
     private lateinit var bottomSheetDialog : BottomSheetDialog
     private lateinit var adapter : HomeListAdapter
@@ -25,7 +28,10 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(), BottomS
         binding.viewModel = viewModel
 
         binding.root.add_new_challenge.setOnClickListener {
-            bottomSheetDialog = BottomSheetDialog(this)
+            bottomSheetDialog =
+                BottomSheetDialog(
+                    this
+                )
             bottomSheetDialog.show(requireActivity().supportFragmentManager, "")
         }
     }
