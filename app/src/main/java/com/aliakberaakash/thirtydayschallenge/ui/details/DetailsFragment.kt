@@ -16,6 +16,7 @@ class DetailsFragment : BaseFragment<DetailsViewModel, DetailsFragmentBinding>()
 
     override fun setVariables(binding: DetailsFragmentBinding) {
         binding.viewModel = viewModel
+        binding.executePendingBindings()
 
         binding.backButton.setOnClickListener {
             //todo implement up button

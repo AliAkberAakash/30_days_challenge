@@ -5,8 +5,6 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
-import com.aliakberaakash.thirtydayschallenge.utils.convertDaysToPercent
-import com.aliakberaakash.thirtydayschallenge.utils.convertDaysToProgress
 
 @BindingAdapter("progressPercentFormatted")
 fun TextView.setProgressPercentFormatted(item: Challenge) {
@@ -15,6 +13,9 @@ fun TextView.setProgressPercentFormatted(item: Challenge) {
 }
 
 @BindingAdapter("progressBarUpdate")
-fun ProgressBar.setSleepQualityString(item: Challenge) {
-    progress = convertDaysToProgress(item.days)
+fun ProgressBar.setSleepQualityString(item: Challenge?) {
+    progress = if(item != null)
+        convertDaysToProgress(item.days)
+    else
+        convertDaysToProgress(0)
 }
