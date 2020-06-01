@@ -37,7 +37,7 @@ class DetailsViewModel(private val myApplication : Application) : BaseViewModel(
         var retVal = View.VISIBLE
 
         for(x in it)
-            if(x.date == date)
+            if(x.date == date && x.challengeId == challenge.value!!.challengeId)
                 retVal = View.INVISIBLE
 
         if(challenge.value!!.days >= 30)
@@ -57,16 +57,20 @@ class DetailsViewModel(private val myApplication : Application) : BaseViewModel(
     {
         val date = getCurrentDateTime().toString("dd/MM/yyyy")
         val myChallenge : Challenge = challenge.value!!
-        myChallenge.days++
+        myChallenge.days = 30
         val activity = Activity(null, myChallenge.challengeId!!, date)
         repository.insertNewActivity(activity)
         repository.updateChallenge(myChallenge)
-        getChallengeAndActivity(myChallenge.challengeId)
+
         Log.d("date", date)
     }
 
     override fun onChallengeAndActivityReceived(myChallengeAndActivity: ChallengeAndActivity) {
         _challengeAndActivity.postValue(myChallengeAndActivity)
+    }
+
+    override fun onUpdateChallenge() {
+        getChallengeAndActivity(challenge.value!!.challengeId!!)
     }
 
 

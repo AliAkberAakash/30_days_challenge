@@ -31,6 +31,7 @@ class DetailsRepository(val context: Application, private val callBack : Details
         thread(true)
         {
             db.challengeDao.update(challenge)
+            callBack.onUpdateChallenge()
         }
     }
 }
