@@ -111,6 +111,7 @@
             tools:text="You haven't completed today's task yet. Hurry up and finish it.\nYou can do it!" />
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="@{() -> viewModel.onCheckInClicked()}"
             android:visibility="@{viewModel.visibility}"
             android:id="@+id/checkin_button"
             android:layout_width="wrap_content"

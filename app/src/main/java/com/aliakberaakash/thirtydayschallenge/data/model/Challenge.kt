@@ -12,5 +12,5 @@ data class Challenge (
     @ColumnInfo(name = "title")
     val title : String = "",
     @ColumnInfo(name = "days")
-    val days : Int = 0
+    var days : Int = 0
 )

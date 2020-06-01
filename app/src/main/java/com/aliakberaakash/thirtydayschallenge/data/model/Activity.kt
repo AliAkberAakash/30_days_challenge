@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 data class Activity (
 
     @PrimaryKey(autoGenerate = true)
-    var activityId : Int = 0,
+    var activityId : Int? = 0,
     @ColumnInfo(name = "challengeId")
     var challengeId : Int = 0,
     @ColumnInfo(name = "date")

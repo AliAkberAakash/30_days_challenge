@@ -1,9 +1,6 @@
 package com.aliakberaakash.thirtydayschallenge.data.localdb
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Transaction
+import androidx.room.*
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import com.aliakberaakash.thirtydayschallenge.data.model.ChallengeAndActivity
 
@@ -12,6 +9,9 @@ interface ChallengeDao {
 
     @Insert
     fun insert(challenge: Challenge)
+
+    @Update
+    fun update(challenge: Challenge)
 
     @Query("SELECT * FROM Challenge")
     fun getAllChallenge() : List<Challenge>

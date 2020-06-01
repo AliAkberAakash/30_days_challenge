@@ -3,6 +3,7 @@ package com.aliakberaakash.thirtydayschallenge.data
 import android.app.Application
 import com.aliakberaakash.thirtydayschallenge.core.data.AppDatabase
 import com.aliakberaakash.thirtydayschallenge.data.model.Activity
+import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import com.aliakberaakash.thirtydayschallenge.ui.details.DetailsViewModelCallBack
 import kotlin.concurrent.thread
 
@@ -25,4 +26,11 @@ class DetailsRepository(val context: Application, private val callBack : Details
         }
     }
 
+    fun updateChallenge(challenge : Challenge)
+    {
+        thread(true)
+        {
+            db.challengeDao.update(challenge)
+        }
+    }
 }
