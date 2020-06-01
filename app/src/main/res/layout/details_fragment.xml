@@ -27,6 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:text="@{viewModel.challenge.title}"
             android:id="@+id/title_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -53,6 +54,7 @@
 
 
         <TextView
+            android:text="Day"
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,6 +66,7 @@
             tools:text="Day" />
 
         <TextView
+            android:text="@{String.valueOf(viewModel.challenge.days)}"
             android:id="@+id/days_count_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -107,6 +110,7 @@
             tools:text="You haven't completed today's task yet. Hurry up and finish it.\nYou can do it!" />
 
         <com.google.android.material.button.MaterialButton
+            android:visibility="@{viewModel.visibility}"
             android:id="@+id/checkin_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

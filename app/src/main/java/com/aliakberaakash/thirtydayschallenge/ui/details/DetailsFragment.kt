@@ -16,10 +16,17 @@ class DetailsFragment : BaseFragment<DetailsViewModel, DetailsFragmentBinding>()
 
     override fun setVariables(binding: DetailsFragmentBinding) {
         binding.viewModel = viewModel
+
+        binding.backButton.setOnClickListener {
+            //todo implement up button
+        }
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        val challengeId = args.challengeId
+        viewModel.getChallengeAndActivity(challengeId)
 
         Log.d("tag", args.challengeId.toString())
 
