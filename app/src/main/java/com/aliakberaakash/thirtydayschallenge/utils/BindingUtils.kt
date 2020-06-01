@@ -1,4 +1,4 @@
-package com.aliakberaakash.thirtydayschallenge.ui.home
+package com.aliakberaakash.thirtydayschallenge.utils
 
 import android.util.Log
 import android.widget.ProgressBar
