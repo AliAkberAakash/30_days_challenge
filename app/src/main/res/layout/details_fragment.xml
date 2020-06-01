@@ -91,10 +91,10 @@
             tools:progress="16" />
 
         <ImageView
+            app:setSource="@{viewModel.challenge}"
             android:id="@+id/image"
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_180sdp"
-            android:src="@drawable/not_done"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progressBar" />

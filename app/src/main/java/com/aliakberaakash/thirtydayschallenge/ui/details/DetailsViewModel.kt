@@ -6,6 +6,7 @@ import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
+import com.aliakberaakash.thirtydayschallenge.R
 import com.aliakberaakash.thirtydayschallenge.core.ui.BaseViewModel
 import com.aliakberaakash.thirtydayschallenge.data.DetailsRepository
 import com.aliakberaakash.thirtydayschallenge.data.model.Activity
@@ -38,6 +39,9 @@ class DetailsViewModel(private val myApplication : Application) : BaseViewModel(
         for(x in it)
             if(x.date == date)
                 retVal = View.INVISIBLE
+
+        if(challenge.value!!.days >= 30)
+            retVal = View.INVISIBLE
 
         retVal
     }
