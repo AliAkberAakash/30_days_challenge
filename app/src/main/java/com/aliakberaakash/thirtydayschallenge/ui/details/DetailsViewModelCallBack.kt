@@ -6,5 +6,6 @@ interface DetailsViewModelCallBack {
 
     fun onChallengeAndActivityReceived(challengeAndActivity: ChallengeAndActivity)
     fun onUpdateChallenge()
+    fun onInsertChallenge()
 
 }

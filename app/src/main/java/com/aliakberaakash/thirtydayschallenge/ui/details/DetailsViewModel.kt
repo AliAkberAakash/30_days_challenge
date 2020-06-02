@@ -71,16 +71,20 @@ class DetailsViewModel(private val myApplication : Application) : BaseViewModel(
         val date = getCurrentDateTime().toString("dd/MM/yyyy")
         //val date = "03/06/2020"
         val myChallenge : Challenge = challenge.value!!
-        myChallenge.days++
         val activity = Activity(null, myChallenge.challengeId!!, date)
         repository.insertNewActivity(activity)
-        repository.updateChallenge(myChallenge)
 
         Log.d("date", date)
     }
 
     override fun onChallengeAndActivityReceived(myChallengeAndActivity: ChallengeAndActivity) {
         _challengeAndActivity.postValue(myChallengeAndActivity)
+    }
+
+    override fun onInsertChallenge() {
+        val myChallenge : Challenge = challenge.value!!
+        myChallenge.days++
+        repository.updateChallenge(myChallenge)
     }
 
     override fun onUpdateChallenge() {

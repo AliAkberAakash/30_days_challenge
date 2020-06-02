@@ -23,6 +23,7 @@ class DetailsRepository(val context: Application, private val callBack : Details
     {
         thread(true) {
             db.activityDao.insert(activity)
+            callBack.onInsertChallenge()
         }
     }
 
