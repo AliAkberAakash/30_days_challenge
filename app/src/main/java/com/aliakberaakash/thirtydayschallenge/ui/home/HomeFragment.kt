@@ -54,7 +54,11 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(),
     }
 
     override fun onSavedButtonClicked(title: String) {
-        viewModel.insertChallenge(Challenge(null,title, 0))
+        if(title.trim().isNotEmpty())
+            viewModel.insertChallenge(Challenge(null, title, 0))
+        else
+            Log.d("HomeFragment", "Title can not be empty")
+
         bottomSheetDialog.dismiss()
     }
 
