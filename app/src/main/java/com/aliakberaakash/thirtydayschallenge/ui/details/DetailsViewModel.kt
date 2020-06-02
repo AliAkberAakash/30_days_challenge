@@ -20,6 +20,7 @@ class DetailsViewModel(private val myApplication : Application) : BaseViewModel(
     private val _challengeAndActivity : MutableLiveData<ChallengeAndActivity> = MutableLiveData()
     val challengeAndActivity : LiveData<ChallengeAndActivity>
         get() = _challengeAndActivity
+    var message : MutableLiveData<String> = MutableLiveData("")
 
     val challenge = Transformations.map(_challengeAndActivity)
     {
@@ -35,14 +36,25 @@ class DetailsViewModel(private val myApplication : Application) : BaseViewModel(
     val visibility = Transformations.map(activityList)
     {
         val date = getCurrentDateTime().toString("dd/MM/yyyy")
+        //val date = "03/06/2020"
         var retVal = View.VISIBLE
 
+        message.postValue(myApplication.getString(R.string.done))
+
         for(x in it)
-            if(x.date == date && x.challengeId == challenge.value!!.challengeId)
+            if(x.date == date && x.challengeId == challenge.value!!.challengeId) {
                 retVal = View.INVISIBLE
+                break
+            }
+
+        if(retVal == View.VISIBLE)
+            message.postValue("")
 
         if(challenge.value!!.days >= 30)
+        {
             retVal = View.INVISIBLE
+            message.postValue(myApplication.getString(R.string.done))
+        }
 
         retVal
     }
@@ -57,6 +69,7 @@ class DetailsViewModel(private val myApplication : Application) : BaseViewModel(
     fun onCheckInClicked()
     {
         val date = getCurrentDateTime().toString("dd/MM/yyyy")
+        //val date = "03/06/2020"
         val myChallenge : Challenge = challenge.value!!
         myChallenge.days++
         val activity = Activity(null, myChallenge.challengeId!!, date)
