@@ -26,14 +26,7 @@ class HomeListViewHolder(private val binding : HomeListItemBinding) : RecyclerVi
 
     fun bind(item: Challenge) {
 
-        val myContext = itemView.context
-
-
-        Glide
-            .with(myContext)
-            .load(R.drawable.boy)
-            .centerCrop()
-            .into(binding.challengeImage)
+        binding.days.text = item.days.toString()
 
         binding.challenge = item
         binding.executePendingBindings()
