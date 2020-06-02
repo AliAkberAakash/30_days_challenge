@@ -57,7 +57,9 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>(),
         if(title.trim().isNotEmpty())
             viewModel.insertChallenge(Challenge(null, title, 0))
         else
-            Log.d("HomeFragment", "Title can not be empty")
+            makeShortToast("Title can not be empty")
+
+
 
         bottomSheetDialog.dismiss()
     }
