@@ -28,6 +28,7 @@ class DetailsViewModel(private val myApplication : Application) : BaseViewModel(
 
     private val activityList = Transformations.map(_challengeAndActivity)
     {
+        Log.d("ActivityList", it.activityList.toString())
         it.activityList
     }
 

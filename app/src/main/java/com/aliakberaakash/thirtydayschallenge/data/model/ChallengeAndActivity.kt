@@ -8,7 +8,7 @@ data class ChallengeAndActivity (
     @Embedded var challenge: Challenge,
     @Relation(
         parentColumn = "challengeId",
-        entityColumn = "activityId"
+        entityColumn = "challengeId"
     )
     var activityList: List<Activity>
 )
