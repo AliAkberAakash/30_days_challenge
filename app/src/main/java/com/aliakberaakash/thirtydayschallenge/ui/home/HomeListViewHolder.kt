@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.aliakberaakash.thirtydayschallenge.R
 import com.aliakberaakash.thirtydayschallenge.data.model.Challenge
 import com.aliakberaakash.thirtydayschallenge.databinding.HomeListItemBinding
+
 import com.bumptech.glide.Glide
 
 class HomeListViewHolder(private val binding : HomeListItemBinding) : RecyclerView.ViewHolder(binding.root){
