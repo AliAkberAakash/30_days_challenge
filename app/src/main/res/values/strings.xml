@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ThirtyDaysChallenge</string>
+    <string name="done">You have completed the challenge today! Come back tomorrow again.</string>
+    <string name="complete">Congratulations on learning something new!</string>
 </resources>
